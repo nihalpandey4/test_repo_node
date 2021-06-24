@@ -2,7 +2,11 @@ const express = require("express");
 const app = express();
 
 app.get("/",(req,res)=>{
-    res.send("testing route");
+    let wait = Date.now()+20000;
+    while(Date.now()<wait){
+
+    }
+    res.send("waiting route");
 })
 
 app.listen(3000,()=>{
